@@ -6,11 +6,11 @@ from pyrtifacts_wrapper.schemas import InventorySlot
 @dataclass
 class CharacterSchema:
     name: str
+    account: str
     skin: str
     level: int
     xp: int
     max_xp: int
-    total_xp: int
     gold: int
     speed: int
     mining_level: int
@@ -34,14 +34,20 @@ class CharacterSchema:
     cooking_level: int
     cooking_xp: int
     cooking_max_xp: int
+    alchemy_level: int
+    alchemy_xp: int
+    alchemy_max_xp: int
     hp: int
+    max_hp: int
     haste: int
     critical_strike: int
-    stamina: int
+    wisdom: int
+    prospecting: int
     attack_fire: int
     attack_earth: int
     attack_water: int
     attack_air: int
+    dmg: int
     dmg_fire: int
     dmg_earth: int
     dmg_water: int
@@ -65,14 +71,15 @@ class CharacterSchema:
     artifact1_slot: str
     artifact2_slot: str
     artifact3_slot: str
-    consumable1_slot: str
-    consumable1_slot_quantity: int
-    consumable2_slot: str
-    consumable2_slot_quantity: int
+    utility1_slot: str
+    utility1_slot_quantity: int
+    utility2_slot: str
+    utility2_slot_quantity: int
+    bag_slot: str
     task: str
     task_type: str
     task_progress: int
     task_total: int
     inventory_max_items: int
-    inventory: List[InventorySlot]
-    cooldown_expiration: Optional[datetime] = None
+    inventory: Optional[List[InventorySlot]]
+    cooldown_expiration: Optional[str]
