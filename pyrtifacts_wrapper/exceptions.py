@@ -1,0 +1,2 @@
+class   PyrtifactsException(Exception):
+    pass

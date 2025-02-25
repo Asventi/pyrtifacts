@@ -1,0 +1,1 @@
+from pyrtifacts_wrapper.RestAdapter import RestAdapter
